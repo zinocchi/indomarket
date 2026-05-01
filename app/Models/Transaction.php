@@ -79,7 +79,7 @@ class Transaction extends Model
      */
     public function details(): HasMany
     {
-        return $this->hasMany(TransactionDetail::class);
+        return $this->hasMany(TransactionDetails::class);
     }
 
     /**

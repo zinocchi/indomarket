@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class TransactionDetail extends Model
+class TransactionDetails extends Model
 {
     protected $fillable = [
         'transaction_id',

@@ -6,13 +6,13 @@ use App\Http\Controllers\{
     ProductController,
     CartController,
     TransactionController,
-    Admin\DashboardController as AdminDashboardController,
-    Admin\ProductController as AdminProductController,
-    Admin\CategoryController as AdminCategoryController,
-    Admin\TransactionController as AdminTransactionController,
-    Admin\UserController as AdminUserController,
     Auth\AuthController
 };
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 use Illuminate\Support\Facades\Route;
 
 /*

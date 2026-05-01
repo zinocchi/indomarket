@@ -64,7 +64,7 @@ class Product extends Model
      */
     public function transactionDetails(): HasMany
     {
-        return $this->hasMany(TransactionDetail::class);
+        return $this->hasMany(TransactionDetails::class);
     }
 
     /**
@@ -124,7 +124,7 @@ class Product extends Model
      */
     public function scopeLowStock($query)
     {
-        return $query->where('stock', '<=', DB::raw('min_stock'));
+        return $query->where('stock', '<=', \DB::raw('min_stock'));
     }
 
     /**
