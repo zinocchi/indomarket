@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->command->info('🌱 Starting database seeding...');
 
-        // Create admin user
         $this->command->info('📝 Creating admin user...');
         $admin = User::create([
             'name' => 'Admin Indomarket',
