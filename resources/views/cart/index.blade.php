@@ -7,13 +7,13 @@
     <div class="bg-gray-50 min-h-screen">
         <div class="container mx-auto px-4 py-6 lg:py-8">
             {{-- Breadcrumb --}}
-            <nav class="flex items-center text-sm mb-6 text-gray-500">
+            {{-- <nav class="flex items-center text-sm mb-6 text-gray-500">
                 <a href="{{ route('dashboard') }}" class="hover:text-emerald-600 transition-colors">
                     <i class="fas fa-home mr-1"></i> Beranda
                 </a>
                 <i class="fas fa-chevron-right mx-2 text-[10px]"></i>
                 <span class="text-emerald-600 font-medium">Keranjang Belanja</span>
-            </nav>
+            </nav> --}}
 
             <h1 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
                 Keranjang Belanja
@@ -164,8 +164,8 @@
                             </div>
 
                             <a href="{{ route('transactions.checkout') }}"
-                                class="block w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white text-center
-                                  px-6 py-4 rounded-2xl font-semibold hover:from-emerald-700 hover:to-emerald-600
+                                class="block w-full bg-gradient-to-r from-green-500 to-green-500 text-white text-center
+                                  px-6 py-4 rounded-2xl font-semibold hover:from-green-500 hover:to-green-500
                                   transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                                 <i class="fas fa-credit-card mr-2"></i>Lanjut ke Pembayaran
                             </a>
@@ -192,7 +192,7 @@
                         Yuk, isi keranjangmu dengan produk-produk terbaik dari Indomarket!
                     </p>
                     <a href="{{ route('products.index') }}"
-                        class="inline-flex items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded-2xl
+                        class="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-2xl
                           font-semibold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-md">
                         <i class="fas fa-shopping-cart"></i>
                         Mulai Belanja

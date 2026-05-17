@@ -5,11 +5,16 @@
             {{-- Brand --}}
             <div>
                 <div class="flex items-center gap-2 mb-4">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-store text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Indo<span class="text-emerald-400">market</span></h3>
+                    <!-- Icon gambar -->
+                    {{-- <div
+                        class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
+                        <img src="{{ asset('asset/icon-store.png') }}" alt="Icon" class="w-5 h-5 object-contain">
+                    </div> --}}
+
+                    <!-- Logo gambar (tulisan Indomarket) -->
+                    <h3 class="text-xl font-bold">
+                        <img src="{{ asset('image/indomarket2.jpeg') }}" alt="Indomarket" class="h-6 object-contain">
+                    </h3>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed">
                     Solusi belanja kebutuhan sehari-hari dengan mudah, cepat, dan harga terjangkau.

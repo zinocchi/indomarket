@@ -180,8 +180,8 @@
                                 <i class="fas fa-print mr-2"></i>Cetak Struk
                             </a>
                             <a href="{{ route('products.index') }}"
-                                class="block w-full text-center bg-emerald-600 text-white px-4 py-3 rounded-xl
-                                  hover:bg-emerald-700 transition-all font-medium text-sm">
+                                class="block w-full text-center bg-green-500 text-white px-4 py-3 rounded-xl
+                                  hover:bg-green-500 transition-all font-medium text-sm">
                                 <i class="fas fa-shopping-bag mr-2"></i>Belanja Lagi
                             </a>
                         </div>

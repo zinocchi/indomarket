@@ -61,7 +61,7 @@
     </style>
 </head>
 
-<body class="min-h-screen relative overflow-x-hidden bg-gray-50">
+<body class="min-h-screen relative overflow-x-hidden bg-white-50">
     {{-- Background Decorative Elements --}}
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         {{-- Top Right Circle --}}
@@ -81,16 +81,20 @@
         <div class="max-w-md w-full animate-fadeInUp">
             {{-- Logo & Brand --}}
             <div class="text-center mb-6 lg:mb-8">
-                <div
-                    class="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-3xl shadow-lg mb-3 lg:mb-4 animate-float">
-                    <i class="fas fa-store text-white text-2xl lg:text-3xl"></i>
-                </div>
+                <!-- Icon di atas -->
+                {{-- <div
+                    class="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20">
+                    <img src="{{ asset('image/icon2.jpeg') }}" alt="Icon"
+                        class="w-32 h-34 lg:w-10 lg:h-10 object-contain">
+                </div> --}}
+
+                <!-- Tulisan Indomarket di bawah -->
                 <h1 class="text-2xl lg:text-3xl font-extrabold text-gray-800">
-                    Indo<span class="text-emerald-600">market</span>
+                    <img src="{{ asset('image/indomarket2.jpeg') }}" alt="Indomarket" class="h-22 lg:h-28 inline-block">
                 </h1>
+
                 <p class="text-gray-500 text-sm lg:text-base mt-2">Masuk untuk melanjutkan belanja</p>
             </div>
-
             {{-- Login Card --}}
             <div class="bg-white rounded-3xl shadow-xl p-6 lg:p-8 border border-gray-100">
                 {{-- Flash Messages --}}
@@ -202,9 +206,9 @@
 
                     {{-- Submit Button --}}
                     <button type="submit"
-                        class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-3.5 lg:py-4 rounded-xl
-                                   font-semibold hover:from-emerald-700 hover:to-emerald-600 transition-all
-                                   shadow-sm hover:shadow-md transform hover:-translate-y-0.5 text-base lg:text-lg">
+                        class="w-full bg-green-500 text-white py-3.5 lg:py-4 rounded-xl
+               font-semibold  transition-all
+               shadow-sm hover:shadow-md transform hover:-translate-y-0.5 text-base lg:text-lg">
                         <i class="fas fa-sign-in-alt mr-2"></i>Masuk
                     </button>
                 </form>

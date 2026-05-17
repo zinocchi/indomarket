@@ -1,18 +1,18 @@
-{{-- resources/views/partials/navbar-redesign.blade.php --}}
 <nav class="bg-white shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, searchOpen: false }">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             {{-- Logo --}}
             <div class="flex items-center gap-8">
                 <a href="{{ route('dashboard') }}" class="flex items-center gap-2 group">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center
-                                shadow-sm group-hover:shadow-md transition-all duration-200 group-hover:scale-105">
-                        <i class="fas fa-store text-white text-lg"></i>
-                    </div>
+                    <!-- Icon gambar -->
+                    {{-- <div
+                        class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-200 group-hover:scale-105">
+                        <img src="{{ asset('asset/icon-store.png') }}" alt="Icon" class="w-5 h-5 object-contain">
+                    </div> --}}
+
+                    <!-- Logo gambar (tulisan Indomarket) -->
                     <div class="hidden sm:block">
-                        <h1 class="text-xl font-bold text-gray-800">Indo<span class="text-emerald-600">market</span>
-                        </h1>
+                        <img src="{{ asset('image/indomarket2.jpeg') }}" alt="Indomarket" class="h-10 object-contain">
                     </div>
                 </a>
             </div>

@@ -195,8 +195,8 @@
 
                         <div class="mt-6 space-y-3">
                             <button type="submit" form="checkoutForm"
-                                class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-6 py-4
-                                       rounded-2xl font-semibold hover:from-emerald-700 hover:to-emerald-600
+                                class="w-full bg-gradient-to-r from-green-500 to-green-500 text-white px-6 py-4
+                                       rounded-2xl font-semibold hover:from-green-500 hover:to-green-500
                                        transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                                 <i class="fas fa-check-circle mr-2"></i>Proses Pembayaran
                             </button>

@@ -138,8 +138,8 @@
 
                                 <div class="flex gap-3">
                                     <button onclick="addToCart({{ $product->id }}, quantity)"
-                                        class="flex-1 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-8 py-4
-                                               rounded-2xl font-semibold text-lg hover:from-emerald-700 hover:to-emerald-600
+                                        class="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4
+                                               rounded-2xl font-semibold text-lg hover:from-green-500 hover:to-emerald-600
                                                transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                                         <i class="fas fa-shopping-cart mr-2"></i>Tambah ke Keranjang
                                     </button>
@@ -217,4 +217,4 @@
     </div>
 
     @include('partials.add-to-cart-script')
-@endsection 
+@endsection

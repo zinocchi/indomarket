@@ -12,13 +12,16 @@
 
     {{-- Logo --}}
     <div class="flex items-center gap-3 p-5 border-b border-gray-800 h-16">
-        <div
-            class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-            <i class="fas fa-store text-white"></i>
-        </div>
+        <!-- Icon gambar -->
+        {{-- <div
+            class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <img src="{{ asset('asset/icon-store.png') }}" alt="Icon" class="w-5 h-5 object-contain">
+        </div> --}}
+
+        <!-- Logo gambar -->
         <div x-show="sidebarOpen || sidebarMobile" class="flex-1 min-w-0">
-            <h1 class="text-lg font-bold text-white truncate">Indo<span class="text-emerald-400">market</span></h1>
-            <p class="text-[10px] text-gray-400 uppercase tracking-wider">Admin Panel</p>
+            <img src="{{ asset('image/indomarket2.jpeg') }}" alt="Indomarket" class="h-6 object-contain">
+            {{-- <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Admin Panel</p> --}}
         </div>
     </div>
 
@@ -28,9 +31,9 @@
             {{-- Dashboard --}}
             <a href="{{ route('admin.dashboard') }}"
                 class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                      {{ request()->routeIs('admin.dashboard') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                      {{ request()->routeIs('admin.dashboard') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                 <i
-                    class="fas fa-chart-pie w-5 text-center text-lg {{ request()->routeIs('admin.dashboard') ? '' : 'group-hover:text-emerald-400' }}"></i>
+                    class="fas fa-chart-pie w-5 text-center text-lg {{ request()->routeIs('admin.dashboard') ? '' : 'group-hover:text-green-500' }}"></i>
                 <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Dashboard</span>
                 @if (request()->routeIs('admin.dashboard'))
                     <span x-show="sidebarOpen || sidebarMobile"
@@ -47,21 +50,21 @@
             <div class="px-3 space-y-1">
                 <a href="{{ route('admin.products.index') }}"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                          {{ request()->routeIs('admin.products.*') && !request()->routeIs('admin.products.create') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                          {{ request()->routeIs('admin.products.*') && !request()->routeIs('admin.products.create') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                     <i class="fas fa-box w-5 text-center text-lg"></i>
                     <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Semua Produk</span>
                 </a>
 
                 <a href="{{ route('admin.products.create') }}"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                          {{ request()->routeIs('admin.products.create') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                          {{ request()->routeIs('admin.products.create') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                     <i class="fas fa-plus-circle w-5 text-center text-lg"></i>
                     <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Tambah Produk</span>
                 </a>
 
                 <a href="{{ route('admin.categories.index') }}"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                          {{ request()->routeIs('admin.categories.*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                          {{ request()->routeIs('admin.categories.*') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                     <i class="fas fa-tags w-5 text-center text-lg"></i>
                     <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Kategori</span>
                 </a>
@@ -76,7 +79,7 @@
             <div class="px-3 space-y-1">
                 <a href="{{ route('admin.transactions.index') }}"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                          {{ request()->routeIs('admin.transactions.*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                          {{ request()->routeIs('admin.transactions.*') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                     <i class="fas fa-shopping-cart w-5 text-center text-lg"></i>
                     <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Transaksi</span>
                 </a>
@@ -91,7 +94,7 @@
             <div class="px-3 space-y-1">
                 <a href="{{ route('admin.users.index') }}"
                     class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
-                          {{ request()->routeIs('admin.users.*') ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
+                          {{ request()->routeIs('admin.users.*') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                     <i class="fas fa-users w-5 text-center text-lg"></i>
                     <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Pengguna</span>
                 </a>
@@ -103,7 +106,7 @@
     <div class="p-4 border-t border-gray-800">
         <div class="flex items-center gap-3">
             <div
-                class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center text-white font-semibold flex-shrink-0">
+                class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-500 rounded-xl flex items-center justify-center text-white font-semibold flex-shrink-0">
                 {{ substr(Auth::user()->name, 0, 1) }}
             </div>
             <div x-show="sidebarOpen || sidebarMobile" class="flex-1 min-w-0">

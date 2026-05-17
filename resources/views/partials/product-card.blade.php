@@ -70,8 +70,8 @@
             {{-- Add to Cart Button (Mobile Always Visible) --}}
             @if ($product->stock > 0)
                 <button onclick="addToCart({{ $product->id }})"
-                    class="w-full bg-emerald-600 text-white text-sm font-medium py-2.5 px-4 rounded-xl
-                               hover:bg-emerald-700 transition-all duration-200
+                    class="w-full bg-green-500 text-white text-sm font-medium py-2.5 px-4 rounded-xl
+                               hover:bg-green-500 transition-all duration-200
                                flex items-center justify-center gap-2 group/btn
                                lg:opacity-0 lg:group-hover:opacity-100">
                     <i class="fas fa-shopping-bag text-xs group-hover/btn:scale-110 transition-transform"></i>

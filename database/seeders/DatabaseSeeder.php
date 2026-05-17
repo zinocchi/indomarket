@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@indomarket.com',
             'password' => Hash::make('password'),
             'role' => 'admin',
-            'phone' => '081234567890',
+            'phone' => '0812234567890',
             'address' => 'Jl. Admin No. 1, Jakarta Pusat',
         ]);
         $this->command->info('✅ Admin created: admin@indomarket.com / password');

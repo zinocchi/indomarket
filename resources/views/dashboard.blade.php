@@ -6,22 +6,22 @@
 @section('content')
     <div class="min-h-screen bg-gray-50">
         {{-- Hero Section --}}
-        <section class="relative bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-600 overflow-hidden">
+        <section class="relative bg-gradient-to-br from-green-600 via-green-500 to-teal-600 overflow-hidden">
             {{-- Decorative Elements --}}
-            <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
                 <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
                 <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                 <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300 rounded-full blur-3xl"></div>
             </div>
 
-            <div class="container mx-auto px-4 py-12 lg:py-16 relative">
+            <div class="container mx-auto px-4 py-12 lg:py-16 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-8">
                     {{-- Hero Text --}}
-                    <div class="flex-1 text-white text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                    <div class="flex-1 text-white text-center lg:text-left relative z-20">
+                        {{-- <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                             <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
                             <span class="text-sm">Gratis Ongkir min. belanja Rp 50.000</span>
-                        </div>
+                        </div> --}}
 
                         <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
                             Belanja Kebutuhan
@@ -29,22 +29,22 @@
                             Lebih Mudah
                         </h1>
 
-                        <p class="text-lg text-emerald-100 mb-8 leading-relaxed">
+                        <p class="text-lg text-green-100 mb-8 leading-relaxed">
                             Temukan berbagai produk kebutuhan pokok, makanan ringan, minuman,
                             dan perlengkapan rumah tangga dengan harga terbaik.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-30">
                             <a href="{{ route('products.index') }}"
-                                class="inline-flex items-center justify-center bg-white text-emerald-700 px-8 py-4 rounded-2xl
+                                class="inline-flex items-center justify-center bg-white text-green-700 px-8 py-4 rounded-2xl
                                   font-semibold hover:bg-amber-400 hover:text-gray-900 transition-all duration-300
-                                  shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                  shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer">
                                 <i class="fas fa-shopping-bag mr-2"></i>
                                 Mulai Belanja
                             </a>
                             <a href="#categories"
                                 class="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4
-                                  rounded-2xl font-semibold hover:bg-white/10 transition-all duration-300">
+                                  rounded-2xl font-semibold hover:bg-white/10 transition-all duration-300 cursor-pointer">
                                 <i class="fas fa-th-large mr-2"></i>
                                 Lihat Kategori
                             </a>
@@ -52,7 +52,7 @@
                     </div>
 
                     {{-- Hero Image/Illustration --}}
-                    <div class="flex-1 flex justify-center lg:justify-end">
+                    <div class="flex-1 flex justify-center lg:justify-end relative z-10">
                         <div class="relative">
                             <div
                                 class="w-64 h-64 lg:w-80 lg:h-80 bg-white/10 backdrop-blur-sm rounded-3xl
@@ -65,7 +65,7 @@
 
                             {{-- Floating Cards --}}
                             <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-lg animate-fadeIn">
-                                <p class="text-emerald-600 font-bold text-sm">⭐ 4.9</p>
+                                <p class="text-green-600 font-bold text-sm">⭐ 4.9</p>
                                 <p class="text-gray-500 text-xs">Rating</p>
                             </div>
 
@@ -79,7 +79,7 @@
             </div>
 
             {{-- Wave Shape --}}
-            <div class="absolute bottom-0 left-0 right-0">
+            <div class="absolute bottom-0 left-0 right-0 pointer-events-none">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full">
                     <path fill="#f9fafb" fill-opacity="1"
                         d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
@@ -94,8 +94,8 @@
                 <div
                     class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300
                         hover:-translate-y-1 text-center">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                        <i class="fas fa-box text-emerald-600"></i>
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-box text-green-600"></i>
                     </div>
                     <p class="text-2xl font-bold text-gray-800">{{ App\Models\Product::active()->inStock()->count() }}</p>
                     <p class="text-sm text-gray-500">Produk Tersedia</p>
@@ -141,7 +141,7 @@
                     <p class="text-gray-500 mt-1">Pilih berdasarkan kategori kebutuhan Anda</p>
                 </div>
                 <a href="{{ route('products.index') }}"
-                    class="hidden sm:inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+                    class="hidden sm:inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
                     Semua Kategori
                     <i class="fas fa-arrow-right text-sm"></i>
                 </a>
@@ -164,11 +164,11 @@
                         class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300
                           hover:-translate-y-1 text-center border border-gray-50">
                         <div
-                            class="w-16 h-16 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl
+                            class="w-16 h-16 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl
                                 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-box-open text-emerald-600 text-xl"></i>
+                            <i class="fas fa-box-open text-green-600 text-xl"></i>
                         </div>
-                        <h3 class="font-semibold text-gray-800 group-hover:text-emerald-600 transition-colors">
+                        <h3 class="font-semibold text-gray-800 group-hover:text-green-600 transition-colors">
                             {{ $category->name }}
                         </h3>
                         <p class="text-sm text-gray-500 mt-1">{{ $category->products_count }} Produk</p>
@@ -178,7 +178,7 @@
 
             {{-- Mobile View All --}}
             <div class="mt-6 text-center sm:hidden">
-                <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 text-emerald-600 font-medium">
+                <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 text-green-600 font-medium">
                     Semua Kategori
                     <i class="fas fa-arrow-right text-sm"></i>
                 </a>
@@ -193,7 +193,7 @@
                     <p class="text-gray-500 mt-1">Produk terbaik pilihan pelanggan</p>
                 </div>
                 <a href="{{ route('products.index') }}"
-                    class="hidden sm:inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+                    class="hidden sm:inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
                     Lihat Semua
                     <i class="fas fa-arrow-right text-sm"></i>
                 </a>
@@ -216,7 +216,7 @@
 
             {{-- Mobile View All --}}
             <div class="mt-6 text-center sm:hidden">
-                <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 text-emerald-600 font-medium">
+                <a href="{{ route('products.index') }}" class="inline-flex items-center gap-2 text-green-600 font-medium">
                     Lihat Semua Produk
                     <i class="fas fa-arrow-right text-sm"></i>
                 </a>
@@ -228,7 +228,7 @@
             <div
                 class="bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 rounded-3xl p-8 lg:p-12
                     shadow-lg relative overflow-hidden">
-                <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-2xl"></div>
                     <div class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-2xl"></div>
                 </div>
@@ -278,7 +278,7 @@
                         <p class="text-gray-500 mt-1">Riwayat pembelian Anda</p>
                     </div>
                     <a href="{{ route('transactions.index') }}"
-                        class="hidden sm:inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+                        class="hidden sm:inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
                         Lihat Semua
                         <i class="fas fa-arrow-right text-sm"></i>
                     </a>
@@ -290,11 +290,11 @@
                             class="flex items-center justify-between p-4 lg:p-6 hover:bg-gray-50 transition-colors border-b last:border-b-0 group">
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="w-12 h-12 bg-{{ $transaction->status == 'completed' ? 'emerald' : ($transaction->status == 'pending' ? 'amber' : 'red') }}-100
+                                    class="w-12 h-12 bg-{{ $transaction->status == 'completed' ? 'green' : ($transaction->status == 'pending' ? 'amber' : 'red') }}-100
                                         rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i
                                         class="fas fa-{{ $transaction->status == 'completed' ? 'check' : ($transaction->status == 'pending' ? 'clock' : 'times') }}
-                                          text-{{ $transaction->status == 'completed' ? 'emerald' : ($transaction->status == 'pending' ? 'amber' : 'red') }}-600"></i>
+                                          text-{{ $transaction->status == 'completed' ? 'green' : ($transaction->status == 'pending' ? 'amber' : 'red') }}-600"></i>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-gray-800">{{ $transaction->invoice_number }}</p>
@@ -307,7 +307,7 @@
                                 <span
                                     class="text-xs px-2 py-1 rounded-full
                                 {{ $transaction->status == 'completed'
-                                    ? 'bg-emerald-100 text-emerald-700'
+                                    ? 'bg-green-100 text-green-700'
                                     : ($transaction->status == 'pending'
                                         ? 'bg-amber-100 text-amber-700'
                                         : 'bg-red-100 text-red-700') }}">
