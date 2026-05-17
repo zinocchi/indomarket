@@ -104,7 +104,7 @@
         });
     }
 }">
-    <div class="min-h-screen flex">
+    <div class="flex min-h-screen">
         {{-- Sidebar Overlay (Mobile) --}}
         <div x-show="sidebarMobile" @click="sidebarMobile = false" x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
@@ -112,15 +112,21 @@
             x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black/50 z-40 lg:hidden">
         </div>
 
-        {{-- Sidebar --}}
+        {{-- Sidebar - Fixed --}}
         @include('admin.partials.sidebar-redesign')
 
-        {{-- Main Content --}}
-        <div class="flex-1 flex flex-col min-h-screen">
-            {{-- Top Navigation --}}
+        {{-- Main Content Area --}}
+        <div class="flex-1 flex flex-col min-h-screen"
+            :class="{
+                'lg:ml-64': sidebarOpen,
+                'lg:ml-20': !sidebarOpen,
+                'ml-0': !sidebarOpen && !sidebarMobile
+            }">
+
+            {{-- Top Navigation - Sticky --}}
             @include('admin.partials.topnav-redesign')
 
-            {{-- Page Content --}}
+            {{-- Page Content - Scrollable --}}
             <main class="flex-1 p-4 lg:p-6">
                 {{-- Flash Messages --}}
                 @if (session()->has('success') || session()->has('error') || session()->has('warning'))

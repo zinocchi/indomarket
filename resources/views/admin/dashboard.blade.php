@@ -11,8 +11,7 @@
 @section('content')
     <div class="space-y-6">
         {{-- Welcome Banner --}}
-        <div
-            class="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 rounded-3xl p-6 lg:p-8 text-white relative overflow-hidden">
+        <div class="bg-green-500 rounded-3xl p-6 lg:p-8 text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-2xl"></div>
                 <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-300 rounded-full blur-2xl"></div>
@@ -21,10 +20,10 @@
             <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                     <h1 class="text-2xl lg:text-3xl font-bold">Selamat Datang, {{ Auth::user()->name }}!</h1>
-                    <p class="text-emerald-100 mt-1">Kelola toko Anda dengan mudah dan efisien</p>
+                    <p class="text-green-100 mt-1">Kelola toko Anda dengan mudah dan efisien</p>
                 </div>
                 <div class="flex items-center gap-2 text-sm">
-                    <i class="fas fa-calendar text-emerald-200"></i>
+                    <i class="fas fa-calendar text-green-200"></i>
                     <span>{{ now()->format('d F Y') }}</span>
                 </div>
             </div>

@@ -172,8 +172,8 @@
                     Batal
                 </a>
                 <button type="submit"
-                    class="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-6 py-3 rounded-xl
-                               font-medium hover:from-emerald-700 hover:to-emerald-600 transition-all shadow-sm text-sm">
+                    class="bg-gradient-to-r from-green-500 to-green-500 text-white px-6 py-3 rounded-xl
+                               font-medium hover:from-green-500 hover:to-green-500 transition-all shadow-sm text-sm">
                     <i class="fas fa-save mr-2"></i>
                     {{ isset($product) ? 'Update Produk' : 'Simpan Produk' }}
                 </button>

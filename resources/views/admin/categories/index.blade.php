@@ -16,7 +16,7 @@
         <div class="lg:col-span-1">
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24">
                 <h3 class="font-bold text-gray-800 text-lg mb-4 flex items-center gap-2">
-                    <i class="fas fa-plus-circle text-emerald-500"></i>
+                    <i class="fas fa-plus-circle text-green-500"></i>
                     Tambah Kategori
                 </h3>
 
@@ -38,12 +38,12 @@
                     <div>
                         <label for="description" class="block text-sm font-semibold text-gray-700 mb-2">Deskripsi</label>
                         <textarea name="description" id="description" rows="3" placeholder="Deskripsi kategori (opsional)"
-                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-0 transition-all text-sm resize-none"></textarea>
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:ring-0 transition-all text-sm resize-none"></textarea>
                     </div>
 
                     <button type="submit"
-                        class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-3 rounded-xl
-                               font-semibold hover:from-emerald-700 hover:to-emerald-600 transition-all shadow-sm text-sm">
+                        class="w-full bg-gradient-to-r from-green-500 to-green-500 text-white py-3 rounded-xl
+                               font-semibold hover:from-green-500 hover:to-green-500 transition-all shadow-sm text-sm">
                         <i class="fas fa-plus mr-2"></i>Tambah Kategori
                     </button>
                 </form>

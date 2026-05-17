@@ -1,7 +1,7 @@
 {{-- resources/views/admin/partials/sidebar-redesign.blade.php --}}
 <aside
     class="bg-gray-900 text-white flex flex-col transition-all duration-300 ease-in-out
-              fixed lg:static inset-y-0 left-0 z-50
+              fixed inset-y-0 left-0 z-50
               w-64"
     :class="{
         'translate-x-0': sidebarOpen || sidebarMobile,
@@ -11,17 +11,16 @@
     }">
 
     {{-- Logo --}}
-    <div class="flex items-center gap-3 p-5 border-b border-gray-800 h-16">
-        <!-- Icon gambar -->
-        {{-- <div
-            class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
-            <img src="{{ asset('asset/icon-store.png') }}" alt="Icon" class="w-5 h-5 object-contain">
-        </div> --}}
-
+    <div class="flex items-center gap-3 p-5 border-b border-gray-800 h-16 flex-shrink-0">
         <!-- Logo gambar -->
         <div x-show="sidebarOpen || sidebarMobile" class="flex-1 min-w-0">
             <img src="{{ asset('image/indomarket2.jpeg') }}" alt="Indomarket" class="h-6 object-contain">
-            {{-- <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Admin Panel</p> --}}
+        </div>
+        {{-- Logo kecil saat collapse --}}
+        <div x-show="!sidebarOpen && !sidebarMobile" class="w-full flex justify-center">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                <i class="fas fa-store-alt text-white text-sm"></i>
+            </div>
         </div>
     </div>
 
@@ -33,7 +32,7 @@
                 class="flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group
                       {{ request()->routeIs('admin.dashboard') ? 'bg-green-500 text-white shadow-lg shadow-green-500/25' : 'text-gray-400 hover:bg-gray-800 hover:text-white' }}">
                 <i
-                    class="fas fa-chart-pie w-5 text-center text-lg {{ request()->routeIs('admin.dashboard') ? '' : 'group-hover:text-green-500' }}"></i>
+                    class="fas fa-chart-pie w-5 text-center text-lg {{ request()->routeIs('admin.dashboard') ? '' : 'group-hover:text-green-400' }}"></i>
                 <span x-show="sidebarOpen || sidebarMobile" class="font-medium text-sm">Dashboard</span>
                 @if (request()->routeIs('admin.dashboard'))
                     <span x-show="sidebarOpen || sidebarMobile"
@@ -103,10 +102,10 @@
     </nav>
 
     {{-- User Info Footer --}}
-    <div class="p-4 border-t border-gray-800">
+    <div class="p-4 border-t border-gray-800 flex-shrink-0">
         <div class="flex items-center gap-3">
             <div
-                class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-500 rounded-xl flex items-center justify-center text-white font-semibold flex-shrink-0">
+                class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white font-semibold flex-shrink-0">
                 {{ substr(Auth::user()->name, 0, 1) }}
             </div>
             <div x-show="sidebarOpen || sidebarMobile" class="flex-1 min-w-0">
